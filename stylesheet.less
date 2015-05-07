@@ -376,6 +376,10 @@ blockquote {
     }
 }
 
+.widget.paypalbuynow .widget.button.paypal {
+    height: 50px;
+}
+
 button.btn {
     text-transform: uppercase;
     text-shadow: 0 1px 0px rgba(0,0,0,0.2);
@@ -831,7 +835,7 @@ footer.bk-footer .footer2 .widget.profile form {
 
 .widget.profile form fieldset input {
     height: 50px;
-    width: 75%;
+    width: 69%;
     background-color: darken(@color-swatch1, 5%);
     border: 1px solid @color-swatch2;
     font-family: @font-swatch5-font-family;
@@ -855,7 +859,7 @@ footer.bk-footer .footer2 .widget.profile form {
     padding: 10px 20px;
     top: 1px;
     height: 50px;
-    width: 24%;
+    width: 29%;
     position: relative;
     border: none;
     -webkit-border-radius: 3px;
@@ -908,7 +912,7 @@ footer.bk-footer .footer2 .widget.profile form {
 
 .widget.signupform fieldset input {
     height: 50px;
-    width: 75%;
+    width: 70%;
     margin-bottom: 10px;
     background-color: darken(@color-swatch1, 5%);
     border: 1px solid @color-swatch2;
@@ -917,7 +921,7 @@ footer.bk-footer .footer2 .widget.profile form {
     border-radius: 3px;
     padding-left: 10px;
     @media @mobile {
-        width: 73%;
+        width: 60%;
     }
 }
 
@@ -928,7 +932,7 @@ footer.bk-footer .footer2 .widget.profile form {
 .widget.signupform button {
     padding: 10px 20px;
     margin: 0;
-    width: 24%;
+    width: 29%;
     height: 50px;
     position: relative;
     border: none;
@@ -938,6 +942,9 @@ footer.bk-footer .footer2 .widget.profile form {
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+    @media @mobile {
+        width: 38%;
+    }
 }
 
 .widget.signupform button:hover {
@@ -1152,7 +1159,7 @@ footer.bk-footer .footer2 .widget.profile form {
             letter-spacing: @font-swatch4-letter-spacing;
         }
         input {
-            width: 75%;
+            width: 70%;
             height: 50px;
             margin-bottom: 10px;
             background-color: darken(@color-swatch1, 5%);
@@ -1161,11 +1168,14 @@ footer.bk-footer .footer2 .widget.profile form {
             -moz-border-radius: 3px;
             border-radius: 3px;
             padding-left: 10px;
+            @media @mobile {
+                width: 59%;
+            }
         }
         button {
             position: relative;
             top: 1px;
-            width: 24%;
+            width: 28%;
             height: 50px;
             background-color: @font-swatch7-background-color;
             font-family: @font-swatch7-font-family;
@@ -1186,6 +1196,9 @@ footer.bk-footer .footer2 .widget.profile form {
             &:hover {
                 background-color: @font-swatch7-background-color-hover;
                 cursor: pointer;
+            }
+            @media @mobile {
+                width: 39%;
             }
         }
     }
