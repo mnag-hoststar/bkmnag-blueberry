@@ -1,7 +1,7 @@
 {
     "name":"Blueberry",
-    "thumbnail":"blueberry.png",
-    "screenshot":"blueberry.png",
+    "thumbnail":"thumbnail.png",
+    "screenshot":"blueberry-screenshot.jpg",
     "templateType":"standard",
     "pageTypes":["home"],
     "tags": {
