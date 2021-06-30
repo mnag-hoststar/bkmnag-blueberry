@@ -17,6 +17,63 @@ body {
 }
 
 /* ===============================
+   TYPOGRAPHY
+   =============================== */
+
+h1, h2, h3, h4, h5, h6,
+[class*="contentgroup__h"],
+.blog-post-title a,
+blockquote:before,
+.widget.image .image-title,
+label {
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+p, ul, ol, li,
+.contentgroup__body,
+.widget.clicktocall a,
+.widget.clicktocall a:hover,
+blockquote,
+.widget.image .image-description,
+.blog-post-published-date {
+    .style--light & {
+        color: fade(@contrast--light, 90%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 90%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 90%);
+    }
+}
+
+a {
+	.style--light & {
+        color: @color--accent;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @color--accent;
+    }
+}
+
+/* ===============================
    CUSTOM CSS
    =============================== */
 
@@ -48,8 +105,6 @@ header.bk-header {
 	display: table;
 	float: left;
 	padding: 7px 0 0;
-	@media @tablet {
-	}
 }
 
 /* COMPANY NAME */
@@ -60,7 +115,6 @@ header.bk-header {
 	padding-left: 10px;
 	a {
 		color: @font-swatch10-color;
-		//line-height: @font-swatch4-line-height;
 		@media @mobile {
 			font-size: @font-swatch9-font-size;
 		}
@@ -170,7 +224,7 @@ footer.bk-footer p {
 
 .language-selector__inner {
     .language-selector & {
-	    box-sizing: content-box;
+	   box-sizing: content-box;
     	padding: @language-padding;
 		max-width: 960px;
 		width: 90%;
@@ -183,14 +237,14 @@ footer.bk-footer p {
 
 	.language-selector.language-selector--dropdown & {
     	&:before {
-    	    content: "";
-            display: block;
+    	   content: "";
+         display: block;
     	    height: @language-line-height;
     	}
     	&:after {
-    	    content: "";
-            display: block;
-    	    height: @language-padding*2;
+    	   content: "";
+         display: block;
+    	   height: @language-padding*2;
     	}
 
 		@media @mobile {
@@ -672,12 +726,40 @@ blockquote {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	border: 1px solid @color-swatch2;
+
+	.style--light & {
+        background-color: darken(@color--light, 5%);
+        border-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 5%);
+        border-color: darken(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        background-color: lighten(@color--dark, 5%);
+        border-color: darken(@color--dark, 10%);
+    }
+
 	&:before {
 		content:open-quote;
 		left: 10px;
 		top: 18px;
 		font-family: georgia;
 		color: @color-swatch3;
+
+		.style--light & {
+        	color: @color--accent;
+	    }
+
+	    .style--accent & {
+	        color: @color--light;
+	    }
+
+	    .style--dark & {
+	        color: @color--accent;
+	    }
 	}
 }
 
@@ -686,19 +768,45 @@ blockquote {
    =============================== */
 
 .widget.button {
-	padding: 4px 0
+	padding: 4px 0;
 }
 
 .widget.button button, 
 .widget.paypalbuynow .widget.button.paypal,
-.widget.dropbox button {
+.widget.dropbox button,
+button.btn,
+a.contentgroup__link {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 	text-transform: uppercase;
+
+	.style--light & {
+    	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+    }
+
+    .style--accent & {
+        text-shadow: 0 1px 1px darken(@color--dark, 10%)
+    }
+
+    .style--dark & {
+        text-shadow: 0 1px 1px darken(@color--accent, 10%);
+    }
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
+
+		.style--light & {
+			background-color: darken(@color--accent, 5%);
+		}
+
+		.style--accent & {
+			background-color: lighten(@color--dark, 5%);
+		}
+
+		.style--dark & {
+			background-color: darken(@color--accent, 5%);
+		}
 	}
 }
 
@@ -706,13 +814,7 @@ blockquote {
 	height: 50px;
 }
 
-button.btn {
-	text-transform: uppercase;
-	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
+
 
 /* ===============================
    LINE WIDGET
@@ -727,6 +829,18 @@ hr.line {
 	height: 1px;
 	width: 100%;
 	border: none;
+
+	.style--light & {
+        background-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 12%);
+    }
+
+    .style--dark & {
+        background-color: lighten(@color--dark, 15%);
+    }
 }
 
 hr.line.align-left {
@@ -763,6 +877,18 @@ hr.line.align-right {
 	color: @font-swatch4-color;
 	letter-spacing: @font-swatch5-letter-spacing;
 	text-decoration: none;
+
+	.style--light & {
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 .widget.clicktocall a:hover {
@@ -801,17 +927,38 @@ hr.line.align-right {
    TWITTER FULL
    =============================== */
 
-.widget.twitter {
-
-}
-
-.widget.twitter a, .widget.twitter ul li a, .widget.twitter ul li span a {
+.widget.twitter a, .widget.twitter ul li a, .widget.twitter ul li span a, .widget.twitter time {
 	color: @font-swatch6-color-hover;
 	font-family: @font-swatch5-font-family;
 	text-decoration: none;
+
+	.style--light & {
+		color: @color--accent;
+	}
+
+	.style--accent & {
+		color: @color--light;
+	}
+
+	.style--dark & {
+		color: @color--accent;
+	}
+
 	&:hover {
 		text-decoration: none;
 		border-bottom: 1px solid @color-swatch3;
+
+		.style--light & {
+			color: @color--accent;
+		}
+
+		.style--accent & {
+			color: @color--light;
+		}
+
+		.style--dark & {
+			color: @color--accent;
+		}
 	}
 }
 
@@ -829,7 +976,6 @@ hr.line.align-right {
 }
 
 .widget.twitter ul a {
-/*    color: @font-swatch2-color;*/
 	font-family: @font-swatch5-font-family;
 	text-decoration: none;
 }
@@ -841,6 +987,18 @@ hr.line.align-right {
 	font-size: @font-swatch5-font-size;
 	color: @font-swatch5-color;
 	padding-bottom: 30px;
+
+	.style--light & {
+		color: fade(@color--dark, 90%);
+	}
+
+	.style--accent & {
+		color: fade(@color--light, 90%);
+	}
+
+	.style--dark & {
+		color: fade(@color--light, 90%);
+	}
 }
 
 .widget.twitter ul li img {
@@ -869,6 +1027,18 @@ hr.line.align-right {
 	font-family: @font-swatch4-font-family;
 	color: @color-swatch3;
 	font-weight: bold;
+
+	.style--light & {
+		color: @color--accent;
+	}
+
+	.style--accent & {
+		color: @color--light;
+	}
+
+	.style--dark & {
+		color: @color--accent;
+	}
 }
 
 /* ===============================
@@ -887,33 +1057,54 @@ hr.line.align-right {
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
 	display: block;
+
+	.style--light & {
+		color: fade(@color--dark, 90%);
+	}
+
+	.style--accent & {
+		color: fade(@color--light, 90%);
+	}
+
+	.style--dark & {
+		color: fade(@color--light, 90%);
+	}
+}
+
+.contactform input, .advancedcontactform input,
+.contactform textarea, .advancedcontactform textarea {
+	background-color: darken(@color-swatch1, 5%);
+	border: 1px solid @color-swatch2;
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	color: @font-swatch5-color;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: 100%;
+
+	.style--light & {
+		background-color: darken(@color--light, 5%);
+		border-color: darken(@color--light, 10%);
+		color: fade(@contrast--light, 10%);
+	}
+
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 5%);
+		color: fade(@contrast--light, 10%);
+	}
 }
 
 .contactform input, .advancedcontactform input {
 	height: 40px;
 	width: 100%;
-	background-color: darken(@color-swatch1, 5%);
-	border: 1px solid @color-swatch2;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	color: @font-swatch5-color;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	padding-left: 10px;
 }
 
 .contactform textarea, .advancedcontactform textarea {
 	height: 100px;
-	width: 100%;
-	background-color: darken(@color-swatch1, 5%);
-	border: 1px solid @color-swatch2;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	color: @font-swatch5-color;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	text-indent: 10px;
 	padding-top: 14px;
 	resize: none;
@@ -940,14 +1131,81 @@ hr.line.align-right {
 	letter-spacing: @font-swatch7-letter-spacing;
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
+
+	.style--light & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+		text-shadow: 0 1px 1px darken(@color--dark, 10%);
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
+
 	&:hover {
 		background-color: darken(@color-swatch3,2%);
 		cursor: pointer;
+
+		.style--light & {
+			background-color: darken(@color--accent, 5%);
+		}
+
+		.style--accent & {
+			background-color: lighten(@color--dark, 5%);
+		}
+
+		.style--dark & {
+			background-color: darken(@color--accent, 5%);
+		}
+	}
+}
+
+// Placeholders
+select::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
+}
+
+select:-moz-placeholder,
+input:-moz-placeholder { /* Firefox 18- */
+	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
+}
+
+select::-moz-placeholder,
+input::-moz-placeholder {  /* Firefox 19+ */
+   	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
+	}
+}
+
+select:-ms-input-placeholder,
+input:-ms-input-placeholder {
+   	.style--light &,
+	.style--accent &,
+	.style--dark & {
+		color: fade(@contrast--light, 80%);
 	}
 }
 
 // Privacy Checkboxes
-
 .widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
 .widget.contactform .form-group.contactform__form-group--terms,
 .widget.signupform .form-group.signupform__form-group--terms {
@@ -995,6 +1253,18 @@ hr.line.align-right {
 	border-radius: 3px;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 	text-transform: uppercase;
+
+	.style--light & {
+    	text-shadow: 0 1px 1px darken(@color--accent, 10%);
+    }
+
+    .style--accent & {
+        text-shadow: 0 1px 1px darken(@color--light, 10%)
+    }
+
+    .style--dark & {
+        text-shadow: 0 1px 1px darken(@color--accent, 10%);
+    }
 }
 
 /* ==================================
@@ -1029,7 +1299,6 @@ hr.line.align-right {
 	background-size: 18px;
 	width: 32px;
 	height: 32px;
-	color: red;
 	background-color: @font-swatch7-background-color;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1041,6 +1310,23 @@ hr.line.align-right {
 	text-indent: 9999px;
 	overflow: hidden;
 
+	.style--light & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+		text-shadow: 0 1px 1px darken(@color--dark, 10%);
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
 }
 
 .widget.profile .bk-profile-socialicons span a {
@@ -1050,7 +1336,19 @@ hr.line.align-right {
 .widget.socialicons span a:hover,
 .widget.profile 
 .bk-profile-socialicons span a:hover {
-	background-color: @font-swatch7-background-color-hover
+	background-color: @font-swatch7-background-color-hover;
+
+	.style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--dark, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--accent, 5%);
+	}
 }
 
 /* SVG ICONS */
@@ -1239,9 +1537,7 @@ footer.bk-footer .footer2 .widget.profile form {
    MAP WIDGET
    =============================== */
 
-.widget.map {
-
-}
+.widget.map {}
 
 /* ===============================
    SIGNUP FORM WIDGET
@@ -1273,6 +1569,20 @@ footer.bk-footer .footer2 .widget.profile form {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding-left: 10px;
+
+	.style--light & {
+		background-color: darken(@color--light, 5%);
+		border:-color darken(@color--light, 10%);
+		color: fade(@contrast--light, 10%);
+	}
+
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		border:-color darken(@color--light, 5%);
+		color: fade(@contrast--light, 10%);
+	}
+
 	@media @mobile {
 		width: 60%;
 	}
@@ -1295,6 +1605,24 @@ footer.bk-footer .footer2 .widget.profile form {
 	text-decoration: none;
 	text-transform: uppercase;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+
+	.style--light {
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+		text-shadow: 0 1px 1px darken(@color--dark, 10%);
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
 	@media @mobile {
 		width: 38%;
 	}
@@ -1303,6 +1631,18 @@ footer.bk-footer .footer2 .widget.profile form {
 .widget.signupform button:hover {
 	background-color: @font-swatch7-background-color-hover;
 	cursor: pointer;
+
+	.style--light & {
+		background-color: darken(@color--accent, 5%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--dark, 5%);
+	}
+
+	.style--dark & {
+		background-color: darken(@color--accent, 5%);
+	}
 }
 
 /* ===============================
@@ -1422,11 +1762,36 @@ footer.bk-footer .footer2 .widget.profile form {
 			-webkit-border-radius: 50%;
 			-moz-border-radius: 50%;
 			border-radius: 50%;
+
+			.style--light & {
+		        background-color: darken(@color--light, 10%);
+		    }
+
+		    .style--accent & {
+		        background-color: darken(@color--accent, 10%);
+		    }
+
+		    .style--dark & {
+		        background-color: lighten(@color--dark, 15%);
+		    }
+
 			&.selected {
 				border: 0;
 				background-color: @color-swatch3;
 				width: 6px;
 				height: 6px;
+
+				.style--light & {
+			        background-color: @color--accent;
+			    }
+
+			    .style--accent & {
+			        background-color: @color--light;
+			    }
+
+			    .style--dark & {
+			        background-color: @color--accent;
+			    }
 			}
 		}
 	}
@@ -1437,17 +1802,28 @@ footer.bk-footer .footer2 .widget.profile form {
    BLOG
    =============================== */
 
-.widget {
-	&.blogpostlist {
-		.blog-post-item {
-			padding: 30px;
-			background-color: darken(@color-swatch1, 5%);
-			border: 1px solid @color-swatch2;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px; 
-			border-radius: 3px;
-		}
-	}
+.widget.blogpostlist .blog-post-item {
+	padding: 30px;
+	background-color: darken(@color-swatch1, 5%);
+	border: 1px solid @color-swatch2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px; 
+	border-radius: 3px;
+
+	.style--light & {
+        background-color: darken(@color--light, 5%);
+        border-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 5%);
+        border-color: darken(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        background-color: lighten(@color--dark, 5%);
+        border-color: darken(@color--dark, 10%);
+    }
 }
 
 .blog-post-feature-image-wrap {  /* Blog post feature image */
@@ -1474,6 +1850,19 @@ footer.bk-footer .footer2 .widget.profile form {
 			color: @font-swatch2-color;
 			letter-spacing: @font-swatch2-letter-spacing;
 			text-decoration: none;
+
+			.style--light & {
+		        color: @contrast--light;
+		    }
+
+		    .style--accent & {
+		        color: @contrast--accent;
+		    }
+
+		    .style--dark & {
+		        color: @contrast--dark;
+		    }
+
 			&:hover {
 				text-decoration: underline;
 			}
@@ -1499,60 +1888,121 @@ footer.bk-footer .footer2 .widget.profile form {
 }
 
 /* BLOG SEARCH */
-.blogsearch {
-	form {
-		label {
-			display: block;
-			margin-bottom: .6em;
-			font-family: @font-swatch4-font-family;
-			font-size: @font-swatch4-font-size;
-			font-weight: @font-swatch4-font-weight;
-			line-height: @font-swatch4-line-height;
-			color: @font-swatch4-color;
-			letter-spacing: @font-swatch4-letter-spacing;
+.blogsearch form {
+	label {
+		display: block;
+		margin-bottom: .6em;
+		font-family: @font-swatch4-font-family;
+		font-size: @font-swatch4-font-size;
+		font-weight: @font-swatch4-font-weight;
+		line-height: @font-swatch4-line-height;
+		color: @font-swatch4-color;
+		letter-spacing: @font-swatch4-letter-spacing;
+
+		.style--light & {
+	        color: @contrast--light;
+	    }
+
+	    .style--accent & {
+	        color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        color: @contrast--dark;
+	    }
+	}
+	input {
+		width: 70%;
+		height: 50px;
+		margin-bottom: 10px;
+		background-color: darken(@color-swatch1, 5%);
+		border: 1px solid @color-swatch2;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		padding-left: 10px;
+
+		.style--light & {
+	        background-color: darken(@color--light, 5%);
+	        border:-color darken(@color--light, 10%);
+	        color: fade(@color--dark, 90%);
+	    }
+
+	    .style--accent & {
+	        background-color: darken(@color--accent, 5%);
+	        border-color: darken(@color--accent, 10%);
+	        color: fade(@color--light, 90%);
+	    }
+
+	    .style--dark & {
+	        background-color: lighten(@color--dark, 5%);
+	        border-color: darken(@color--dark, 10%);
+	        color: fade(@color--light, 90%);
+	    }
+
+		@media @mobile {
+			width: 59%;
 		}
-		input {
-			width: 70%;
-			height: 50px;
-			margin-bottom: 10px;
-			background-color: darken(@color-swatch1, 5%);
-			border: 1px solid @color-swatch2;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			padding-left: 10px;
-			@media @mobile {
-				width: 59%;
+	}
+	button {
+		position: relative;
+		top: 1px;
+		width: 28%;
+		height: 50px;
+		background-color: @font-swatch7-background-color;
+		font-family: @font-swatch7-font-family;
+		font-size: @font-swatch7-font-size;
+		font-weight: @font-swatch7-font-weight;
+		line-height: @font-swatch7-line-height;
+		color: @font-swatch7-color;
+		letter-spacing: @font-swatch7-letter-spacing;
+		padding: 10px 20px;
+		margin: 0 0 0 0.5%;
+		border: none;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+
+		.style--light & {
+			background-color: @color--accent;
+			color: @contrast--accent;
+			text-shadow: 0 1px 1px darken(@color--accent, 10%);
+		}
+
+		.style--accent & {
+			background-color: @color--dark;
+			color: @contrast--dark;
+			text-shadow: 0 1px 1px darken(@color--dark, 10%);
+		}
+
+		.style--dark & {
+			background-color: @color--accent;
+			color: @contrast--accent;
+			text-shadow: 0 1px 1px darken(@color--accent, 10%);
+		}
+
+		&:hover {
+			background-color: @font-swatch7-background-color-hover;
+			cursor: pointer;
+
+			.style--light & {
+				background-color: darken(@color--accent, 5%);
+			}
+
+			.style--accent & {
+				background-color: lighten(@color--dark, 5%);
+			}
+
+			.style--dark & {
+				background-color: darken(@color--accent, 5%);
 			}
 		}
-		button {
-			position: relative;
-			top: 1px;
-			width: 28%;
-			height: 50px;
-			background-color: @font-swatch7-background-color;
-			font-family: @font-swatch7-font-family;
-			font-size: @font-swatch7-font-size;
-			font-weight: @font-swatch7-font-weight;
-			line-height: @font-swatch7-line-height;
-			color: @font-swatch7-color;
-			letter-spacing: @font-swatch7-letter-spacing;
-			padding: 10px 20px;
-			margin: 0 0 0 0.5%;
-			border: none;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			text-decoration: none;
-			text-transform: uppercase;
-			text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-			&:hover {
-				background-color: @font-swatch7-background-color-hover;
-				cursor: pointer;
-			}
-			@media @mobile {
-				width: 39%;
-			}
+
+		@media @mobile {
+			width: 39%;
 		}
 	}
 }
@@ -1683,7 +2133,7 @@ footer.bk-footer .footer2 .widget.profile form {
 		cursor: pointer;
 		position: relative;
 		background-repeat: no-repeat;
-		background-position: right center;
+		background-position: ~"calc(100% - 10px)" center;
 		margin: 0;
 		color: @color-swatch5;
 		position: relative;
@@ -1703,7 +2153,21 @@ footer.bk-footer .footer2 .widget.profile form {
 		letter-spacing: 0;
 		float: none;
 		height: 41px;
-		background-image: image('/images/ui-select-arrow.png');
+		background-image: image('/images/ui-select-arrow.svg');
+		background-size: 20px;
+
+		.style--light & {
+			background-color: darken(@color--light, 5%);
+			border-color: darken(@color--light, 10%);
+			color: fade(@contrast--light, 90%);
+		}
+
+		.style--accent &,
+		.style--dark & {
+			background-color: @color--light;
+			border-color: darken(@color--light, 5%);
+			color: fade(@contrast--light, 90%);
+		}
 
 		@media @mobile {
 		  display: block;
@@ -1711,7 +2175,7 @@ footer.bk-footer .footer2 .widget.profile form {
 		}
 	}
 
-   .widget.ecomproductslist {
+  .widget.ecomproductslist {
   .ecom-productslist-products {
 	// Filter
 	.productlist-filter {
@@ -1764,7 +2228,7 @@ footer.bk-footer .footer2 .widget.profile form {
 			letter-spacing: 0;
 			float: none;
 			height: 40px;
-			background-image: image('/images/ui-select-arrow.png');
+			background-image: image('/images/ui-select-arrow.svg');
 
 			@media @mobile {
 			  display: block;
@@ -1821,6 +2285,26 @@ input, textarea {
 	background-position-x: 93%;
 	background-position-y: 55%;
   }
+}
+
+.widget.ecomproductslist .ecom-productslist-image-wrap,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
+	background-color: transparent;
+}
+
+.ecom-productlist-price,
+.ecom-featuredproducts-price {
+	.style--light & {
+		color: @color--accent;
+	}
+
+	.style--accent & {
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		color: @color--accent;
+	}
 }
 
 	/*  Basket Icon  */
@@ -2305,5 +2789,4 @@ input, textarea {
 	  width: 50%;
 	  padding-bottom: 50%;
 	}
-
 }
