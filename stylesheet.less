@@ -1,8 +1,6 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
-/* ===============================
-   MIXINS
-   =============================== */
+// MIXINS
 
 .appearance(@appearance: none) {
     -webkit-appearance: @appearance;
@@ -10,9 +8,7 @@
     appearance: @appearance;
 }
 
-/* ===============================
-   MAIN
-   =============================== */
+// MAIN
 
 body {
 	background-color: @color-swatch1;
@@ -30,9 +26,7 @@ body {
 	clear: both;
 }
 
-/* ===============================
-   TYPOGRAPHY
-   =============================== */
+// TYPOGRAPHY
 
 h1, h2, h3, h4, h5, h6,
 [class*="contentgroup__h"],
@@ -91,9 +85,7 @@ a {
     }
 }
 
-/* ===============================
-   CUSTOM CSS
-   =============================== */
+// CUSTOM CSS
 
 .main {
 	padding: 2em 0;
@@ -103,15 +95,13 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 	overflow: visible;
 }
 
-/* DEFAULT PAGE TYPE */
+// DEFAULT PAGE TYPE
 
 .bk-pt-default header.bk-header {
 	border-bottom: 1px solid @color-swatch2;
 }
 
-/* ===============================
-   HEADER
-   =============================== */
+// HEADER
 
 header.bk-header {
 	padding: 16px 0;
@@ -125,21 +115,23 @@ header.bk-header {
 	padding: 7px 0 0;
 }
 
-/* COMPANY NAME */
+// COMPANY NAME
 
 .widget.companyname {
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 10px;
+
 	a {
 		color: @font-swatch10-color;
+
 		@media @mobile {
 			font-size: @font-swatch9-font-size;
 		}
 	}
 }
 
-/* LOGO */
+// LOGO
 
 .widget.logo {
 	display: inline-block;
@@ -148,9 +140,7 @@ header.bk-header {
 }
 
 
-/* ===============================
-   FOOTER
-   =============================== */
+// FOOTER
 
 footer.bk-footer {
 	background-color: @color-swatch2;
@@ -185,9 +175,7 @@ footer.bk-footer p {
     }
 }
 
-/* ===============================
-   Language Selector
-   =============================== */
+// Language Selector
 
 @language-padding: 0.5em;
 @language-line-height: @font-swatch7-line-height;
@@ -210,6 +198,7 @@ footer.bk-footer p {
   			box-shadow: none;
 		}
 	}
+
 	&.language-selector--dark {
 		background-color: @color-swatch4;
 		
@@ -259,6 +248,7 @@ footer.bk-footer p {
          display: block;
     	    height: @language-line-height;
     	}
+
     	&:after {
     	   content: "";
          display: block;
@@ -498,9 +488,7 @@ footer.bk-footer p {
 	}
 }
 
-/* ===============================
-   EXTENDED NAVIGATION
-   =============================== */
+// EXTENDED NAVIGATION
 
 .header.bk-header {
 	.clearfix;
@@ -555,7 +543,7 @@ footer.bk-footer p {
 	text-decoration: none;
 }
 
-/* FOLDER */
+// FOLDER
 
 .widget.extendednavigation ul li.folder {
 	margin-right: 0;
@@ -574,7 +562,7 @@ footer.bk-footer p {
 	right: 26px;
 }
 
-/* DROPDOWN MENU */
+// DROPDOWN MENU
 
 .widget.extendednavigation li > ul {
 	display: none
@@ -593,9 +581,9 @@ footer.bk-footer p {
 .widget.extendednavigation li:hover > ul li {
 	display: block;
 	width: 100%;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box; /* Firefox, other Gecko */
-	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; // Safari/Chrome, other WebKit
+	-moz-box-sizing: border-box; // Firefox, other Gecko
+	box-sizing: border-box; // Opera/IE 8+
 }
 
 .widget.extendednavigation li:hover > ul li:hover {
@@ -606,9 +594,7 @@ footer.bk-footer p {
 	padding: 0
 }
 
-/* ===============================
-   FEATURE
-   =============================== */
+// FEATURE
 
 .widget.feature .feature-bgimg {
 	height: 550px;
@@ -623,7 +609,7 @@ footer.bk-footer p {
 	}
 }
 
-/* FEATURE TITLE */
+// FEATURE TITLE
 
 .widget.feature h2 {
 	font-family: @font-swatch8-font-family;
@@ -635,7 +621,7 @@ footer.bk-footer p {
 	padding-bottom: 0;
 }
 
-/* FEATURE STRAPLINE */
+// FEATURE STRAPLINE
 
 .widget.feature h3 {
 	font-family: @font-swatch9-font-family;
@@ -647,7 +633,7 @@ footer.bk-footer p {
 	font-style: italic;
 }
 
-/* FEATURE BUTTON */
+// FEATURE BUTTON
 
 .widget.feature button, .widget.feature .feature-bgimg .content button {
 	font-family: @font-swatch7-font-family;
@@ -708,9 +694,7 @@ footer.bk-footer p {
 	margin-right: 5px
 }
 
-/* ===============================
-   CONTENT
-   =============================== */
+// CONTENT
 
 .widget.content {
 	padding: 0;
@@ -780,9 +764,7 @@ blockquote {
 	}
 }
 
-/* ===============================
-   BUTTON CSS
-   =============================== */
+// BUTTON CSS
 
 .widget.button {
 	padding: 4px 0;
@@ -810,6 +792,7 @@ a.contentgroup__link {
     .style--dark & {
         text-shadow: 0 1px 1px darken(@color--accent, 10%);
     }
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 
@@ -831,9 +814,7 @@ a.contentgroup__link {
 	height: 50px;
 }
 
-/* ===============================
-   LINE WIDGET
-   =============================== */
+// LINE WIDGET
 
 .widget.line {
 	padding: 10px 0
@@ -870,9 +851,7 @@ hr.line.align-right {
 	margin: 20px 0px 20px auto
 }
 
-/* =======================================
-   CLICK TO CALL
-   ==================================== */
+// CLICK TO CALL
 
 .widget.clicktocall {
 	padding: 8px 0
@@ -937,9 +916,7 @@ hr.line.align-right {
 	font-weight: bold
 }
 
-/* ===============================
-   TWITTER FULL
-   =============================== */
+// TWITTER FULL
 
 .widget.twitter a, .widget.twitter ul li a, .widget.twitter ul li span a, .widget.twitter time {
 	color: @font-swatch6-color-hover;
@@ -1028,6 +1005,7 @@ hr.line.align-right {
 .widget.twitter .twitter-profile-pic {
 	float: left;
 	margin-right: 20px;
+
 	@media @mobile {
 		display: none;
 	}
@@ -1055,9 +1033,7 @@ hr.line.align-right {
 	}
 }
 
-/* ===============================
-   CONTACT FORM
-   =============================== */
+// CONTACT FORM
 
 .form-group {
 	margin-bottom: 1em;
@@ -1231,7 +1207,7 @@ input::-webkit-input-placeholder {
 }
 
 select:-moz-placeholder,
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder { // Firefox 18-
 	.style--light &,
 	.style--accent &,
 	.style--dark & {
@@ -1240,7 +1216,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 select::-moz-placeholder,
-input::-moz-placeholder {  /* Firefox 19+ */
+input::-moz-placeholder {  // Firefox 19+
    	.style--light &,
 	.style--accent &,
 	.style--dark & {
@@ -1292,9 +1268,7 @@ input:-ms-input-placeholder {
 	}
 }
 
-/* ===============================
-   TWEET THIS
-   =============================== */
+// TWEET THIS
 
 .widget.tweet {
 	padding: 9px 0
@@ -1320,9 +1294,7 @@ input:-ms-input-placeholder {
     }
 }
 
-/* ==================================
-   SOCIAL BAR WIDGET / SOCIAL PROFILE
-   =============================== */
+// SOCIAL BAR WIDGET / SOCIAL PROFILE
 
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons {
@@ -1404,7 +1376,7 @@ input:-ms-input-placeholder {
 	}
 }
 
-/* SVG ICONS */
+// SVG ICONS
 
 .svg .widget.socialicons span.bk-socialicons-twitter a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
@@ -1436,7 +1408,7 @@ input:-ms-input-placeholder {
 	background-image: image('/images/social/socialicons-youtube.svg')
 }
 
-/* PNG ICONS */
+// PNG ICONS
 
 .widget.socialicons span.bk-socialicons-twitter a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
@@ -1468,9 +1440,7 @@ input:-ms-input-placeholder {
 	background-image: image('/images/social/socialicons-youtube.png')
 }
 
-/* ===============================
-   PROFILE WIDGET
-   =============================== */
+// PROFILE WIDGET
 
 .widget.profile span,
 .widget.profile a {
@@ -1491,7 +1461,7 @@ input:-ms-input-placeholder {
 	text-decoration: none;
 }
 
-/* FOOTER PROFILE - TWITTER */
+// FOOTER PROFILE - TWITTER
 
 .widget.profile ul.twitter {
 	padding: 0px;
@@ -1508,7 +1478,7 @@ input:-ms-input-placeholder {
 	display: none
 }
 
-/* FOOTER PROFILE - SIGNUP FORM */
+// FOOTER PROFILE - SIGNUP FORM
 
 .widget.profile form {
   padding: 0 0 20px;
@@ -1586,9 +1556,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	cursor: pointer;
 }
 
-/* ===============================
-   SIGNUP FORM WIDGET
-   =============================== */
+// SIGNUP FORM WIDGET
 
 .widget.signupform {
   padding: 0px;
@@ -1670,6 +1638,7 @@ footer.bk-footer .footer2 .widget.profile form {
 		color: @contrast--accent;
 		text-shadow: 0 1px 1px darken(@color--accent, 10%);
 	}
+
 	@media @mobile {
 		width: 38%;
 	}
@@ -1692,9 +1661,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	}
 }
 
-/* ===============================
-   GALLERY
-   =============================== */
+// GALLERY
 
 .widget.gallery .image-data {
 	padding: 25px;
@@ -1709,31 +1676,34 @@ footer.bk-footer .footer2 .widget.profile form {
 	color: @color-swatch1;
 }
 
-/* ===============================
-   SLIDESHOW WIDGET
-   =============================== */
+// SLIDESHOW WIDGET
 
 .widget.responsiveslideshow {
 	.slideshow-image-list,
 	.slideshow-widget {
 		min-height: 450px;
+
 		@media @tablet {
 			min-height: 350px;
 		}
+
 		@media @mobile {
 			min-height: 280px;
 			height: 280px;
 		}
 	}
+
 	.title {
 		display: block;
 	}
+
 	.content-wrapper {
 		background: rgba(0,0,0,0.5);
 	}
+
 	.slideshow-widget {
 
-		/* Arrows */
+		// Arrows
 
 		.btn-prev,
 		.btn-next {
@@ -1746,33 +1716,38 @@ footer.bk-footer .footer2 .widget.profile form {
 			-webkit-border-radius: 50%;
 			-moz-border-radius: 50%;
 			border-radius: 50%;
+
 			@media @tablet {
 				width: 30px;
 				height: 30px;
 			}
 		}
+
 		.btn-prev {
 			&:after {
 				content: "\2190";
 				color: #fff;
 				top: 7px;
-				@media @tablet {
-					top: 1px!important;
-				}
-			}
-		}
-		.btn-next {
-			&:after {
-				content: "\2192";
-				color: #fff;
-				top: 7px;
+
 				@media @tablet {
 					top: 1px!important;
 				}
 			}
 		}
 
-		/* Play Button */
+		.btn-next {
+			&:after {
+				content: "\2192";
+				color: #fff;
+				top: 7px;
+
+				@media @tablet {
+					top: 1px!important;
+				}
+			}
+		}
+
+		// Play Button
 
 		.btn-play {
 			top: 40%;
@@ -1782,12 +1757,14 @@ footer.bk-footer .footer2 .widget.profile form {
 			-webkit-border-radius: 4px;
 			-moz-border-radius: 4px;
 			border-radius: 4px;
+
 			&:after {
 				color: #fff;
 				letter-spacing: -4px;
 				top: 2px;
 				line-height: 51px;
 			}
+
 			@media @tablet {
 				top: 43%;
 				width: 40px;
@@ -1797,13 +1774,14 @@ footer.bk-footer .footer2 .widget.profile form {
 					font-size: 26px;
 				}
 			}
+
 			@media @mobile {
 				top: 41%;
 			}
 		}
 	}
 
-	/* Slideshow Controls */
+	// Slideshow Controls
 
 	.slideshow-widget-controls {
 		.dot {
@@ -1848,9 +1826,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	}
 }
 
-/* ===============================
-   BLOG
-   =============================== */
+// BLOG
 
 .widget.blogpostlist .blog-post-item {
 	padding: 30px;
@@ -1876,13 +1852,14 @@ footer.bk-footer .footer2 .widget.profile form {
     }
 }
 
-.blog-post-feature-image-wrap {  /* Blog post feature image */
+.blog-post-feature-image-wrap {  // Blog post feature image
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			height: 250px;
 			max-width: 100%;
 			margin-bottom: 20px;
+
 			img {
 				display: none;
 			}
@@ -1891,6 +1868,7 @@ footer.bk-footer .footer2 .widget.profile form {
 .blog-post-item {
 	margin: 1.5em 0;
 	padding-bottom: 1em;
+
 	h2 {
 		a {
 			font-family: @font-swatch2-font-family;
@@ -1937,7 +1915,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	width: 100%;
 }
 
-/* BLOG SEARCH */
+// BLOG SEARCH
 
 .blogsearch form {
 	label {
@@ -1995,6 +1973,7 @@ footer.bk-footer .footer2 .widget.profile form {
 			width: 59%;
 		}
 	}
+
 	button {
 		position: relative;
 		top: 1px;
@@ -2058,17 +2037,17 @@ footer.bk-footer .footer2 .widget.profile form {
 	}
 }
 
-/* ===============================
-   MENU
-   =============================== */
+// MENU
 
 // Menu Sections
 
 .widget.menusections {
 	margin: 0 0 30px;
+
 	ul {
 		padding: 1em!important;
 		text-align: center;
+
 		li {
 			@media @mobile {
 				width: 100%;
@@ -2076,8 +2055,10 @@ footer.bk-footer .footer2 .widget.profile form {
 			}
 		}
 	}
+
 	a {
 		color: @color-swatch4;
+
 		&:hover {
 			color: @color-swatch3;
 			text-decoration: none;
@@ -2094,9 +2075,11 @@ footer.bk-footer .footer2 .widget.profile form {
 		border-bottom: 1px solid @color-swatch2;
 		padding-bottom: 30px;
 	}
+
 	.menu-header {
 		margin-bottom: 30px;
 	}
+
 	.menu-name,
 	.menu-description,
 	.menu-note,
@@ -2105,11 +2088,14 @@ footer.bk-footer .footer2 .widget.profile form {
 		text-align: center;
 		padding-bottom: 0;
 	}
+
 	.menu-subsection {
 		padding: 0;
 	}
+
 	.menu-item-image-wrap {
 		background-image: none!important;
+
 		img {
 			max-height: 180px;
 		}
@@ -2138,6 +2124,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	letter-spacing: @font-swatch7-letter-spacing;
 	text-transform: uppercase;
 }
+
 .menu-item-nutritional-prop {
 	font-size: bkscale(@font-swatch5-font-size,0.8);
 	line-height: bkscale(@font-swatch5-line-height,0.8);
@@ -2173,9 +2160,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	border: 1px solid lighten(@color-swatch3,15%);
 }
 
-/* =======================================
-   ECOMMERCE
-   ==================================== */
+// ECOMMERCE
 
 .widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
 	background-position: 0 3000%;
@@ -2216,7 +2201,7 @@ footer.bk-footer .footer2 .widget.profile form {
 					}
 
 					button {
-						height: 40px;
+						min-height: 40px;
 						padding: 0 25px;
 					}
 
@@ -2254,41 +2239,39 @@ footer.bk-footer .footer2 .widget.profile form {
 	}
 }
 
-	/*  Basket Icon  */
+//  Basket Icon 
 
-	.widget.ecombasket {
-		margin-bottom: 2em;
+.widget.ecombasket {
+	margin-bottom: 2em;
+}
+
+//  Order Button 
+
+.widget.ecomcheckout {
+	.checkout-order-button {
+		margin: 20px 0 20px 0;
+		font-family: @font-swatch7-font-family;
+		font-weight:@font-swatch7-font-weight;
+		line-height: @font-swatch7-line-height;
+		letter-spacing: @font-swatch7-letter-spacing;
+		background-color: @font-swatch7-background-color;
+		color: @font-swatch7-color;
+		font-size: @font-swatch7-font-size;
+		padding: 10px 16px;
+		margin: 1em 0;
+		border: none;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		box-shadow: 0 4px darken(@color-swatch3,15%);
+		text-decoration: none;
+		text-transform: uppercase;
+		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
 	}
 
-	/*  Order Button  */
-
-	.widget.ecomcheckout {
-
-		.checkout-order-button {
-			margin: 20px 0 20px 0;
-			font-family: @font-swatch7-font-family;
-			font-weight:@font-swatch7-font-weight;
-			line-height: @font-swatch7-line-height;
-			letter-spacing: @font-swatch7-letter-spacing;
-			background-color: @font-swatch7-background-color;
-			color: @font-swatch7-color;
-			font-size: @font-swatch7-font-size;
-			padding: 10px 16px;
-			margin: 1em 0;
-			border: none;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			box-shadow: 0 4px darken(@color-swatch3,15%);
-			text-decoration: none;
-			text-transform: uppercase;
-			text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-		}
-
-		.delivery-price {
-			line-height: 50px;
-		}
-
+	.delivery-price {
+		line-height: 50px;
+	}
 }
 
 .widget.ecomproduct .ecom-product .btn {
@@ -2308,6 +2291,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	text-decoration: none;
 	text-transform: uppercase;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
@@ -2318,6 +2302,7 @@ footer.bk-footer .footer2 .widget.profile form {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+
 	p, .basket-count {
 		text-transform: uppercase;
 		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
@@ -2332,32 +2317,36 @@ footer.bk-footer .footer2 .widget.profile form {
 
 // Basket Summary
 
-
 .widget.ecombasketsummary {
+
 	// Title
+
 	.basket-summary-title {
 		border-bottom: 2px solid darken(@color-swatch1,10%);
 	}
 
 	// Empty basket
+
 	.basket-summary-empty-copy {
 		margin: 2em 0;
 	}
 
 	// Checkout Items
+
 	table.basket-summary-items-table {
 		margin-bottom: 30px;
 		border-spacing: 0;
 		width: 100%;
 
-
 		tr {
 			@media @mobile {
 				display: block;
 			}
+
 			td, th {
 				padding: 20px 0;
 				border-bottom: none;
+
 				@media @mobile {
 					display: block;
 					padding: 10px 0 0 0;
@@ -2366,26 +2355,30 @@ footer.bk-footer .footer2 .widget.profile form {
 		}
 
 		// Table Head
+
 		tbody tr:first-child {
 			@media @mobile {
 				display: none;
 			}
+
 			th {
 				border-bottom: 1px solid darken(@color-swatch1,10%);
+
 				&:nth-child(2) {
 					border-right: 0px darken(@color-swatch1,10%);
 				}
 
 			}
 		}
+
 		// Item
+
 		tr.basket-summary-items {
 			@media @mobile {
 				position: relative;
 				border-top: 1px darken(@color-swatch1,10%);
 				padding: 0 0 10px 0;
 				margin: 0 0 10px 0;
-
 			}
 
 			td {
@@ -2394,11 +2387,14 @@ footer.bk-footer .footer2 .widget.profile form {
 					border-bottom: none;
 				}
 			}
+
 			// Image
+
 			td:nth-child(1) {
 				@media @mobile {
 					width: auto;
 				}
+				
 				.image-wrap {
 					width: 100%;
 					height: 0;
@@ -2406,13 +2402,16 @@ footer.bk-footer .footer2 .widget.profile form {
 					float: none;
 					background-size: cover;
 					background-position: center;
+
 					@media @mobile {
 						padding-bottom: 0;
 						height: auto;
 						background-position: -1000px;
 					}
+
 					img {
 						display: none;
+
 						@media @mobile {
 							display: block;
 							width: 60%;
@@ -2421,37 +2420,47 @@ footer.bk-footer .footer2 .widget.profile form {
 					}
 				}
 			}
+
 			// Product info
+
 			td:nth-child(2) {
 				padding-left: 1em;
 				padding-right: 170px;
 				vertical-align: top;
 				position: relative;
+
 				@media @tablet{
 					padding-right: 0;
 					float: left;
 				}
+
 				@media @mobile {
 					width: auto;
 					padding-left: 0;
 					border-right: none;
 					float: none;
 				}
+
 				// Name
+				
 				.basket-summary-productname {
 					font-size: @font-swatch4-font-size;
 					display: block;
+
 					@media @mobile {
 						font-size: bkscale(@font-swatch4-font-size, 0.8);
 					}
 				}
+
 				// Price
+
 				.basket-summary-pricepu {
 					font-size: @font-swatch4-font-size;
 					@media @mobile {
 						font-size: bkscale(@font-swatch4-font-size, 0.8);
 					}
 				}
+
 				// Quantity label
 				.basket-summary-quantity {
 					width: 150px;
@@ -2463,34 +2472,41 @@ footer.bk-footer .footer2 .widget.profile form {
 					line-height: 30px;
 					text-align: center;
 					font-size: bkscale(@font-swatch5-font-size, 0.8);
+
 					@media @tablet {
 						position: relative;
 						right: 0;
 						top: 0;
 					}
+
 					@media @mobile {
 						width: 130px;
 						height: 50px;
 					}
 				}
+
 				// Quantity button
+
 				.basket-summary-quantitybtn {
 					background-color: transparent;
 					margin: 0;
 					position: absolute;
 					width: 150px;
 					height: 40px;
+
 					@media @tablet {
 						position: relative;
 						right: 0;
 						top: 0;
 						float: right;
 					}
+
 					@media @mobile {
 						height: 30px;
 						width: 130px;
 						float: none;
 					}
+
 					button {
 						font-family: @font-swatch5-font-family;
 						font-weight: 700;
@@ -2505,7 +2521,6 @@ footer.bk-footer .footer2 .widget.profile form {
 						top: 0;
 						width: 40px;
 						height: 40px;
-
 
 						@media @mobile {
 							width: 30px;
@@ -2524,7 +2539,9 @@ footer.bk-footer .footer2 .widget.profile form {
 							right: 0;
 						}
 					}
+
 					// Count
+
 					span {
 						background-color: darken(@color-swatch1, 6%);
 						color: invert(@color-swatch2);
@@ -2537,6 +2554,7 @@ footer.bk-footer .footer2 .widget.profile form {
 						top: 0;
 						display: block;
 						width: 70px;
+
 						@media @mobile {
 							height: 30px;
 							line-height: 30px;
@@ -2546,8 +2564,10 @@ footer.bk-footer .footer2 .widget.profile form {
 					}
 				}
 			}
+
 			td.basket-summary-amount {
 				text-align: right;
+
 				@media @mobile {
 					text-align: left;
 					position: absolute;
@@ -2558,19 +2578,23 @@ footer.bk-footer .footer2 .widget.profile form {
 		}
 
 		// Sub Total
+
 		tbody tr:last-child {
 			td {
 				font-size: @font-swatch4-font-size;
 				border-top: 1px solid darken(@color-swatch1,10%);
 				border-bottom: 2px solid darken(@color-swatch1,10%);
+
 				@media @mobile {
 					text-align: left;
 					border-top: 0;
 					border-bottom: 0;
 					font-size: bkscale(@font-swatch4-font-size, 0.9);
 				}
+
 				&.basket-summary-subtotal {
 					text-align: right;
+
 					@media @mobile {
 						border-top: 2px solid darken(@color-swatch1,10%);
 						border-bottom: 2px solid darken(@color-swatch1,10%);
@@ -2581,28 +2605,23 @@ footer.bk-footer .footer2 .widget.profile form {
 	}
 
 	// Ts & Cs
+	
 	.basket-summary-legal-links {
 		margin-top: 2em;
 		list-style-type: none;
 	}
 }
 
-/* ===============================
-   IPAD WIDTH
-   =============================== */
+// IPAD WIDTH
 
 @media @tablet { 
 
-	/* NAV */
-
+	// NAV
 
 	.widget.extendednavigation {
 		width: 100%;
 		padding: 0;
- /*       margin: 0;*/
 	}
-
-	/* NAV */
 
 	.widget .extendednavigation ul {
 		width: 100%;
@@ -2624,22 +2643,19 @@ footer.bk-footer .footer2 .widget.profile form {
 		margin: 0;
 	}
 
-	/* GALLERY */
+	// GALLERY
 
 	.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
 		font-size:bkscale(@font-swatch5-font-size,0.9);
 		line-height:bkscale(@font-swatch5-line-height,0.9);
 	}
-
 }
 
-/* ===============================
-   IPHONE WIDTH
-   =============================== */
+// IPHONE WIDTH
 
 @media only screen and (max-width: 480px) { 
 	
-	/* UL ALIGN RIGHT */
+	// UL ALIGN RIGHT
 
 	.widget.extendednavigation ul.align-right li:hover ul li {
 		text-align: right
@@ -2649,19 +2665,19 @@ footer.bk-footer .footer2 .widget.profile form {
 		background-position: 12px center
 	}
 
-	/* UL ALIGN LEFT */
+	// UL ALIGN LEFT
 
 	.widget.extendednavigation ul.align-left li:hover ul li {
 		text-align: left
 	}
 
-	/* UL ALIGN CENTER */
+	// UL ALIGN CENTER
 
 	.widget.extendednavigation ul.align-center li:hover ul li {
 		text-align: center
 	}
 
-	/* FEATURE */
+	// FEATURE
 
 	.widget.feature h2 {
 		font-size: bkscale(@font-swatch8-font-size,0.7);
@@ -2681,7 +2697,7 @@ footer.bk-footer .footer2 .widget.profile form {
 		height: 300px
 	}
 
-	/* CLICK TO CALL */
+	// CLICK TO CALL
 
 	.widget.clicktocall a {
 		background-image: image('/images/ic-call.svg');
@@ -2711,15 +2727,14 @@ footer.bk-footer .footer2 .widget.profile form {
 		cursor: pointer;
 	}
 
-	/* GALLERY */
+	// GALLERY
 
 	.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-	max-height: 150px;
+		max-height: 150px;
 	}
 
-	.widget.gallery ul.gallery-widget li
-	{
-	  width: 50%;
-	  padding-bottom: 50%;
+	.widget.gallery ul.gallery-widget li {
+		width: 50%;
+		padding-bottom: 50%;
 	}
 }
