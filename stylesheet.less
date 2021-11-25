@@ -146,18 +146,47 @@ footer.bk-footer {
 	background-color: @color-swatch2;
 	padding: 4em 0;
 	color: @color-swatch4;
-}
 
-footer.bk-footer h1,
-footer.bk-footer h2,
-footer.bk-footer h3,
-footer.bk-footer h4 {
-	color: @color-swatch4;
-	padding-bottom: 30px;
-}
+	.widget.profile {
+		form {
+			margin: 0;
+			padding: 0 0 20px;
+		}
 
-footer.bk-footer p {
-	color: @color-swatch4;
+        .form-group {
+			display: block;
+        }
+
+        form fieldset input {
+            min-width: 100%;
+        }
+
+        form button {
+            word-break: break-word;
+            height: auto;
+            width: auto;
+            min-width: 100%;
+            margin: 10px 0 0;
+            line-height: 1.25em;
+            min-height: 50px;
+
+            @media @tablet {
+                margin: 5px 0;
+            }
+        }
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4 {
+		padding: 30px 0 20px;
+		color: @color-swatch4;
+	}
+	
+	p {
+		color: @color-swatch4;
+	}
 }
 
 .gdpr-footer {
