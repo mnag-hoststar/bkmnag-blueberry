@@ -2010,11 +2010,11 @@ footer.bk-footer .footer2 .widget.profile form {
 				margin: 0 -10px;
 
 				.form-group {
+					display: flex;
 					flex-grow: 1;
-					margin-right: 10px;
-					margin-left: 10px;
-					display: inline-block;
-					vertical-align: center;
+					padding: 0 10px 10px;
+					margin: 0;
+					width: 100%/3;
 
 					@media @mobile {
 						display: block;
@@ -2037,14 +2037,7 @@ footer.bk-footer .footer2 .widget.profile form {
 						}
 					}
 
-					button {
-						margin-left: 10px;
-						min-height: 40px;
-						padding: 0 25px;
-					}
-
 					&.productlist-search {
-						display: flex;
 						width: 100%;
 						margin-top: 1em;
 						margin-bottom: 20px;
@@ -2059,6 +2052,28 @@ footer.bk-footer .footer2 .widget.profile form {
 
 						label {
 							display: none;
+						}
+
+						input {
+							width: 70%;
+							margin-right: 1%;
+							flex-grow: 1;
+						
+							@media @mobile {
+								margin-bottom: 10px;
+								margin-right: 0;
+								width: 100%;
+							}
+						
+							.responsivecolumns & {
+								margin-bottom: 10px;
+								margin-right: 0;
+								width: 100%;
+							}
+						}
+
+						.button {
+							display: inline-block;
 						}
 					}
 				}
