@@ -1816,6 +1816,7 @@ footer.bk-footer .footer2 .widget.profile form {
 .blogsearch form {
 	label {
 		display: block;
+		width: 100%;
 		margin-bottom: .6em;
 		font-family: @font-swatch4-font-family;
 		font-size: @font-swatch4-font-size;
@@ -1836,99 +1837,22 @@ footer.bk-footer .footer2 .widget.profile form {
 	        color: @contrast--dark;
 	    }
 	}
+
 	input {
 		width: 70%;
-		height: 50px;
-		margin-bottom: 10px;
-		background-color: darken(@color-swatch1, 5%);
-		border: 1px solid @color-swatch2;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-		padding-left: 10px;
-
-		.style--light & {
-	        background-color: darken(@color--light, 5%);
-	        border:-color darken(@color--light, 10%);
-	        color: fade(@color--dark, 90%);
-	    }
-
-	    .style--accent & {
-	        background-color: darken(@color--accent, 5%);
-	        border-color: darken(@color--accent, 10%);
-	        color: fade(@color--light, 90%);
-	    }
-
-	    .style--dark & {
-	        background-color: lighten(@color--dark, 5%);
-	        border-color: darken(@color--dark, 10%);
-	        color: fade(@color--light, 90%);
-	    }
+		margin-right: 1%;
+		flex-grow: 1;
 
 		@media @mobile {
-			width: 59%;
-		}
-	}
-
-	button {
-		position: relative;
-		top: 1px;
-		width: 28%;
-		height: 50px;
-		background-color: @font-swatch7-background-color;
-		font-family: @font-swatch7-font-family;
-		font-size: @font-swatch7-font-size;
-		font-weight: @font-swatch7-font-weight;
-		line-height: @font-swatch7-line-height;
-		color: @font-swatch7-color;
-		letter-spacing: @font-swatch7-letter-spacing;
-		padding: 10px 20px;
-		margin: 0 0 0 0.5%;
-		border: none;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-		text-decoration: none;
-		text-transform: uppercase;
-		text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-
-		.style--light & {
-			background-color: @color--accent;
-			color: @contrast--accent;
-			text-shadow: 0 1px 1px darken(@color--accent, 10%);
+			margin-bottom: 10px;
+			margin-right: 0;
+			width: 100%;
 		}
 
-		.style--accent & {
-			background-color: @color--dark;
-			color: @contrast--dark;
-			text-shadow: 0 1px 1px darken(@color--dark, 10%);
-		}
-
-		.style--dark & {
-			background-color: @color--accent;
-			color: @contrast--accent;
-			text-shadow: 0 1px 1px darken(@color--accent, 10%);
-		}
-
-		&:hover {
-			background-color: @font-swatch7-background-color-hover;
-			cursor: pointer;
-
-			.style--light & {
-				background-color: darken(@color--accent, 5%);
-			}
-
-			.style--accent & {
-				background-color: lighten(@color--dark, 5%);
-			}
-
-			.style--dark & {
-				background-color: darken(@color--accent, 5%);
-			}
-		}
-
-		@media @mobile {
-			width: 39%;
+		.responsivecolumns & {
+			margin-bottom: 10px;
+			margin-right: 0;
+			width: 100%;
 		}
 	}
 }
