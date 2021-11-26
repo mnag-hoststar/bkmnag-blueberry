@@ -1009,7 +1009,18 @@ hr.line.align-right {
 // CONTACT FORM
 
 .form-group {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
 	margin-bottom: 1em;
+
+	@media @mobile {
+		display: block;
+	}
+
+	.responsivecolumns & {
+		display: block;
+	}
 }
 
 label {
@@ -1019,6 +1030,12 @@ label {
 	line-height: @font-swatch5-line-height;
 	color: @font-swatch5-color;
 	letter-spacing: @font-swatch5-letter-spacing;
+
+	.contactform &,
+	.advancedcontactform & {
+		display: block;
+		margin-bottom: 5px;
+	}
 
 	.style--light & {
 		color: fade(@color--dark, 90%);
@@ -1045,6 +1062,7 @@ input, textarea, select {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	min-height: 50px;
 	width: 100%;
 
 	.style--light & {
@@ -1062,8 +1080,7 @@ input, textarea, select {
 }
 
 input {
-	height: 40px;
-	width: 100%;
+	margin-bottom: 0;
 }
 
 textarea {
@@ -1100,10 +1117,29 @@ select {
 
 // Radiobuttons, Checkboxes
 
+.contactform .option-list,
+.advancedcontactform .option-list {
+	width: 100%;
+}
+
 .contactform .option-item--radio,
 .contactform .option-item--checkbox,
 .advancedcontactform .option-item--radio,
 .advancedcontactform .option-item--checkbox {
+	list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+	width: 100%;
+
+	input {
+		width: @font-swatch5-line-height/2;
+		height: inherit;
+		margin-right: 0.75em;
+		margin-top: 0;
+		min-height: @font-swatch5-line-height;
+		line-height: @font-swatch5-line-height;
+	}
+
 	label {
 		label;
 		word-break: break-word;
@@ -1118,6 +1154,8 @@ button.btn {
 	padding: 8px 25px;
 	margin: 0;
 	border: none;
+	min-height: 50px;
+	min-width: 150px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -1247,12 +1285,14 @@ input:-ms-input-placeholder {
 	padding: 9px 0
 }
 
-.svg .widget.tweet a {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
+.widget.tweet a {
 	border-radius: 3px;
 	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-	text-transform: uppercase;
+    text-transform: uppercase;
+    min-height: 50px;
+    display: inline-block;
+    padding: 11px 20px 11px 55px;
+    background-position: 20px;
 
 	.style--light & {
     	text-shadow: 0 1px 1px darken(@color--accent, 10%);
@@ -1467,61 +1507,8 @@ footer.bk-footer .footer2 .widget.profile form {
 	margin: 0;
 }
 
-.widget.profile form label {
-	display: none;
-	width: 100%;
-	float: left;
-	margin-bottom: 6px;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch5-line-height;
-	color: @font-swatch5-color;
-	letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.profile form fieldset input {
-	height: 50px;
-	width: 69%;
-	background-color: darken(@color-swatch1, 5%);
-	border: 1px solid @color-swatch2;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch5-line-height;
-	color: @font-swatch5-color;
-	letter-spacing: @font-swatch5-letter-spacing;
-	text-indent: 16px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	padding: 0;
-}
-
 .widget.profile form input:focus {
 	outline: none;
-}
-
-.widget.profile form button {
-	padding: 10px 20px;
-	top: 1px;
-	height: 50px;
-	width: 29%;
-	position: relative;
-	border: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-	font-family: @font-swatch7-font-family;
-	font-size: @font-swatch7-font-size;
-	font-weight: @font-swatch7-font-weight;
-	line-height: @font-swatch7-line-height;
-	letter-spacing: @font-swatch7-letter-spacing;
-	background-color: @font-swatch7-background-color;
-	color: @font-swatch7-color;
 }
 
 .widget.profile form button:hover {
@@ -1548,90 +1535,25 @@ footer.bk-footer .footer2 .widget.profile form {
 }
 
 .widget.signupform fieldset input {
-	height: 50px;
 	width: 70%;
-	margin-bottom: 10px;
-	background-color: darken(@color-swatch1, 5%);
-	border: 1px solid @color-swatch2;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	padding-left: 10px;
-
-	.style--light & {
-		background-color: darken(@color--light, 5%);
-		border:-color darken(@color--light, 10%);
-		color: fade(@contrast--light, 10%);
-	}
-
-	.style--accent &,
-	.style--dark & {
-		background-color: @color--light;
-		border:-color darken(@color--light, 5%);
-		color: fade(@contrast--light, 10%);
-	}
+	margin-right: 1%;
+	flex-grow: 1;
 
 	@media @mobile {
-		width: 60%;
+		margin-bottom: 10px;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	.responsivecolumns & {
+		margin-bottom: 10px;
+		margin-right: 0;
+		width: 100%;
 	}
 }
 
 .widget.signupform fieldset input:focus {
   	outline: none;
-}
-
-.widget.signupform button {
-	padding: 10px 20px;
-	margin: 0;
-	width: 29%;
-	height: 50px;
-	position: relative;
-	border: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-
-	.style--light {
-		background-color: @color--accent;
-		color: @contrast--accent;
-		text-shadow: 0 1px 1px darken(@color--accent, 10%);
-	}
-
-	.style--accent & {
-		background-color: @color--dark;
-		color: @contrast--dark;
-		text-shadow: 0 1px 1px darken(@color--dark, 10%);
-	}
-
-	.style--dark & {
-		background-color: @color--accent;
-		color: @contrast--accent;
-		text-shadow: 0 1px 1px darken(@color--accent, 10%);
-	}
-
-	@media @mobile {
-		width: 38%;
-	}
-}
-
-.widget.signupform button:hover {
-	background-color: @font-swatch7-background-color-hover;
-	cursor: pointer;
-
-	.style--light & {
-		background-color: darken(@color--accent, 5%);
-	}
-
-	.style--accent & {
-		background-color: lighten(@color--dark, 5%);
-	}
-
-	.style--dark & {
-		background-color: darken(@color--accent, 5%);
-	}
 }
 
 // GALLERY
