@@ -629,7 +629,7 @@ footer.bk-footer {
 }
 
 .widget.feature .content {
-	height: 450px;
+	min-height: 450px;
 	text-align: center;
 
 	@media @tablet {
@@ -646,6 +646,7 @@ footer.bk-footer {
 	line-height: @font-swatch8-line-height;
 	color: @font-swatch8-color;
 	letter-spacing: @font-swatch8-letter-spacing;
+	padding-top: 1em;
 	padding-bottom: 0;
 }
 
@@ -658,68 +659,12 @@ footer.bk-footer {
 	line-height: @font-swatch9-line-height;
 	color: @font-swatch9-color;
 	letter-spacing: @font-swatch9-letter-spacing;
+	padding-top: 1em;
 	font-style: italic;
 }
 
-// FEATURE BUTTON
-
-.widget.feature button, .widget.feature .feature-bgimg .content button {
-	font-family: @font-swatch7-font-family;
-	font-weight:@font-swatch7-font-weight;
-	font-size: @font-swatch7-font-size;
-	line-height: @font-swatch7-line-height;
-	letter-spacing: @font-swatch7-letter-spacing;
-	color: @font-swatch7-color;
-	background-color: @font-swatch7-background-color;
-	padding: 10px 20px;
-	margin: 10px;
-	border: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-	&:hover {
-		background-color: @font-swatch7-background-color-hover;
-	}
-}
-
-.widget.feature button:hover {
-	background-color: @font-swatch7-background-color-hover;
-	cursor: pointer;
-}
-
-.widget.feature button.btn.justifyleft {
-	text-align: left
-}
-
-.widget.feature button.btn.justifycenter {
-	text-align: center
-}
-
-.widget.feature button.btn.justifyright {
-	text-align: right
-}
-
-.widget.feature button.btn.justifyfull {
-	text-align: justify
-}
-
-.widget.feature button.btn.italic {
-	font-style: italic
-}
-
-.widget.feature button.btn.bold {
-	font-weight: bold
-}
-
-.widget.feature button span {
-	vertical-align: center
-}
-
-.widget.feature button i {
-	margin-right: 5px
+.widget.feature .feature-bgimg .content button {
+	margin: 1em 0 3em;
 }
 
 // CONTENT
