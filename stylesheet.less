@@ -5,9 +5,9 @@
 // MIXINS
 
 .appearance(@appearance: none) {
-    -webkit-appearance: @appearance;
-    -moz-appearance: @appearance;
-    appearance: @appearance;
+	-webkit-appearance: @appearance;
+	-moz-appearance: @appearance;
+	appearance: @appearance;
 }
 
 // MAIN
@@ -40,19 +40,19 @@ h1, h2, h3, h4, h5, h6,
 blockquote:before,
 .widget.image .image-title,
 label {
-    word-break: break-word;
+	word-break: break-word;
 
-    .style--light & {
-        color: @contrast--light;
-    }
+	.style--light & {
+		color: @contrast--light;
+	}
 
-    .style--accent & {
-        color: @contrast--accent;
-    }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-    .style--dark & {
-        color: @contrast--dark;
-    }
+	.style--dark & {
+		color: @contrast--dark;
+	}
 }
 
 p, ul, ol, li,
@@ -64,31 +64,31 @@ blockquote,
 .blog-post-published-date {
 	word-break: break-word;
 	
-    .style--light & {
-        color: fade(@contrast--light, 90%);
-    }
+	.style--light & {
+		color: fade(@contrast--light, 90%);
+	}
 
-    .style--accent & {
-        color: fade(@contrast--accent, 90%);
-    }
+	.style--accent & {
+		color: fade(@contrast--accent, 90%);
+	}
 
-    .style--dark & {
-        color: fade(@contrast--dark, 90%);
-    }
+	.style--dark & {
+		color: fade(@contrast--dark, 90%);
+	}
 }
 
 a {
 	.style--light & {
-        color: @color--accent;
-    }
+		color: @color--accent;
+	}
 
-    .style--accent & {
-        color: @contrast--accent;
-    }
+	.style--accent & {
+		color: @contrast--accent;
+	}
 
-    .style--dark & {
-        color: @color--accent;
-    }
+	.style--dark & {
+		color: @color--accent;
+	}
 }
 
 // DEFAULT PAGE TYPE
@@ -149,21 +149,21 @@ footer.bk-footer {
 			padding: 0 0 20px;
 		}
 
-        .form-group {
+		.form-group {
 			display: block;
-        }
+		}
 
-        form fieldset input {
-            min-width: 100%;
-        }
+		form fieldset input {
+			min-width: 100%;
+		}
 
-        form button {
-            word-break: break-word;
-            width: auto;
-            margin: 10px 0 0;
-            line-height: 1.25em;
-            min-height: 50px;
-        }
+		form button {
+			word-break: break-word;
+			width: auto;
+			margin: 10px 0 0;
+			line-height: 1.25em;
+			min-height: 50px;
+		}
 	}
 	
 	h1,
@@ -182,8 +182,8 @@ footer.bk-footer {
 .gdpr-footer {
 	background-color: darken(@color-swatch2, 5%);
 	padding: 10px;
-    
-    &__link {
+	
+	&__link {
 		color: @color-swatch4;
 		font-family: @font-swatch5-font-family;
 		font-size: @font-swatch5-font-size;
@@ -191,7 +191,7 @@ footer.bk-footer {
 		line-height: @font-swatch5-line-height;
 		letter-spacing: @font-swatch5-letter-spacing;
 		padding: 5px 10px;
-    }
+	}
 }
 
 // Language Selector
@@ -205,7 +205,7 @@ footer.bk-footer {
 	&.language-selector--horizontal,
 	&.language-selector--dropdown {
 		z-index: 200;
-	    position: relative;
+		position: relative;
 		box-sizing: content-box;
 		width: auto;
 	}
@@ -227,52 +227,52 @@ footer.bk-footer {
 	}
 	
 	&.language-selector--dropdown {
-	    height: auto;
+		height: auto;
 		text-align: left;
 	}
 
-    .language-selector__inner,
-    .language-selector__list,
-    .language-selector__item,
-    .language-selector__link,
-    .language-selector__name,
-    .language-selector__localised-name {
-    	font-family: @font-swatch7-font-family;
-    	font-size: @font-swatch7-font-size;
-    	font-weight: @font-swatch7-font-weight;
-    	line-height: @language-line-height;
-    	letter-spacing: @font-swatch7-letter-spacing;
-    	color: @font-swatch7-color;
-    }
+	.language-selector__inner,
+	.language-selector__list,
+	.language-selector__item,
+	.language-selector__link,
+	.language-selector__name,
+	.language-selector__localised-name {
+		font-family: @font-swatch7-font-family;
+		font-size: @font-swatch7-font-size;
+		font-weight: @font-swatch7-font-weight;
+		line-height: @language-line-height;
+		letter-spacing: @font-swatch7-letter-spacing;
+		color: @font-swatch7-color;
+	}
 }
 	
 // Inner
 
 .language-selector__inner {
-    .language-selector & {
+	.language-selector & {
 	   box-sizing: content-box;
-    	padding: @language-padding;
+		padding: @language-padding;
 		max-width: 960px;
 		width: 90%;
 		margin: 0 auto;
-    }
-    
-    .language-selector.language-selector--horizontal & {
-    	padding: @language-padding @language-padding 0;
-    }
+	}
+	
+	.language-selector.language-selector--horizontal & {
+		padding: @language-padding @language-padding 0;
+	}
 
 	.language-selector.language-selector--dropdown & {
-    	&:before {
-    	   content: "";
-         display: block;
-    	    height: @language-line-height;
-    	}
+		&:before {
+		   content: "";
+		 display: block;
+			height: @language-line-height;
+		}
 
-    	&:after {
-    	   content: "";
-         display: block;
-    	   height: @language-padding*2;
-    	}
+		&:after {
+		   content: "";
+		 display: block;
+		   height: @language-padding*2;
+		}
 
 		@media @mobile {
 			width: 100%;
@@ -283,21 +283,21 @@ footer.bk-footer {
 // List
 
 .language-selector__list {
-    .language-selector & {
-	    min-width: auto;
-    }
+	.language-selector & {
+		min-width: auto;
+	}
 	
 	.language-selector.language-selector--dropdown & {
 		box-sizing: border-box;
 		margin: @language-padding;
 		min-width: auto;
-	    max-width: ~"calc(100% - 1em)";
-        
-        @media @tablet {
-		    margin: 0;
-    	    padding: @language-padding;
-	    	max-width: 100%;
-        }
+		max-width: ~"calc(100% - 1em)";
+		
+		@media @tablet {
+			margin: 0;
+			padding: @language-padding;
+			max-width: 100%;
+		}
 		
 		@media @mobile {
 			width: 100%;
@@ -317,18 +317,18 @@ footer.bk-footer {
 	.language-selector.language-selector--light &,
 	.language-selector.language-selector--dark & {
 		cursor: pointer;
-	    position: relative;
+		position: relative;
 		border: none;
 		background-color: transparent;
 		width: auto;
 		max-width: 100%;
 		-webkit-transition: .2s;
-        -moz-transition: .2s;
-        -ms-transition: .2s;
-        transition: .2s;
+		-moz-transition: .2s;
+		-ms-transition: .2s;
+		transition: .2s;
 		
 		.language-selector--horizontal& {
-		    margin: 0 0 @language-padding @language-padding;
+			margin: 0 0 @language-padding @language-padding;
 		}
 	}
 	
@@ -338,9 +338,9 @@ footer.bk-footer {
 		.language-selector--light&,
 		.language-selector--dark& {
 			background-color: @font-swatch7-background-color;
-        	-webkit-border-radius: 3px;
-        	-moz-border-radius: 3px;
-        	border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
 			
 			&:hover {
 				background-color: @font-swatch7-background-color-hover;
@@ -348,7 +348,7 @@ footer.bk-footer {
 			
 			&--current {
 				background-color: darken(@font-swatch7-background-color-hover, 20%);
-			    
+				
 				&:hover {
 					background-color: @font-swatch7-background-color-hover;
 				}
@@ -361,9 +361,9 @@ footer.bk-footer {
 		.language-selector--dark& {
 			&, &--current {
 				background-color: @font-swatch7-background-color;
-            	-webkit-border-radius: 3px;
-            	-moz-border-radius: 3px;
-            	border-radius: 3px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
 				
 				&:hover {
 					background-color: @font-swatch7-background-color-hover;
@@ -375,37 +375,37 @@ footer.bk-footer {
 	// Current Item
 	
 	&--current {
-	    &:before {
-    		.language-selector.language-selector--dropdown & {
+		&:before {
+			.language-selector.language-selector--dropdown & {
 				position: absolute;
-        		content: "\25be";
-        		top: 50%;
-        		right: -1px;
-        		margin-top: -(@language-line-height/4);
-        		width: @language-padding*4;
-    		    background-color: transparent;
-        		line-height: @language-line-height/2;
-        	    font-size: fade(@color-swatch7, 20%);
-        		color: fade(@color-swatch7, 20%);
-        		text-align: center;
-    		}
-	    }
+				content: "\25be";
+				top: 50%;
+				right: -1px;
+				margin-top: -(@language-line-height/4);
+				width: @language-padding*4;
+				background-color: transparent;
+				line-height: @language-line-height/2;
+				font-size: fade(@color-swatch7, 20%);
+				color: fade(@color-swatch7, 20%);
+				text-align: center;
+			}
+		}
 
-	    &:after {
-    		.language-selector.language-selector--dropdown & {
+		&:after {
+			.language-selector.language-selector--dropdown & {
 				position: absolute;
-        		content: "\25be";
-        		top: 50%;
-        		right: 0;
-        		margin-top: -(@language-line-height/4);
-        		width: @language-padding*4;
-    		    background-color: transparent;
-        		line-height: @language-line-height/2;
-        	    font-size: @font-swatch7-font-size;
-        		color: @font-swatch7-color;
-        		text-align: center;
-    		}
-	    }
+				content: "\25be";
+				top: 50%;
+				right: 0;
+				margin-top: -(@language-line-height/4);
+				width: @language-padding*4;
+				background-color: transparent;
+				line-height: @language-line-height/2;
+				font-size: @font-swatch7-font-size;
+				color: @font-swatch7-color;
+				text-align: center;
+			}
+		}
 	}
 }
 
@@ -771,6 +771,8 @@ footer.bk-footer {
 	}
 }
 
+// BLOCKQUOTE
+
 blockquote {
 	background-color: darken(@color-swatch1, 5%);
 	-webkit-border-radius: 3px;
@@ -779,19 +781,19 @@ blockquote {
 	border: 1px solid @color-swatch2;
 
 	.style--light & {
-        background-color: darken(@color--light, 5%);
-        border-color: darken(@color--light, 10%);
-    }
+		background-color: darken(@color--light, 5%);
+		border-color: darken(@color--light, 10%);
+	}
 
-    .style--accent & {
-        background-color: darken(@color--accent, 5%);
-        border-color: darken(@color--accent, 10%);
-    }
+	.style--accent & {
+		background-color: darken(@color--accent, 5%);
+		border-color: darken(@color--accent, 10%);
+	}
 
-    .style--dark & {
-        background-color: lighten(@color--dark, 5%);
-        border-color: darken(@color--dark, 10%);
-    }
+	.style--dark & {
+		background-color: lighten(@color--dark, 5%);
+		border-color: darken(@color--dark, 10%);
+	}
 
 	&:before {
 		content:open-quote;
@@ -801,16 +803,16 @@ blockquote {
 		color: @color-swatch3;
 
 		.style--light & {
-        	color: @color--accent;
-	    }
+			color: @color--accent;
+		}
 
-	    .style--accent & {
-	        color: @color--light;
-	    }
+		.style--accent & {
+			color: @color--light;
+		}
 
-	    .style--dark & {
-	        color: @color--accent;
-	    }
+		.style--dark & {
+			color: @color--accent;
+		}
 	}
 }
 
@@ -832,16 +834,16 @@ a.contentgroup__link {
 	text-transform: uppercase;
 
 	.style--light & {
-    	text-shadow: 0 1px 1px darken(@color--accent, 10%);
-    }
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
 
-    .style--accent & {
-        text-shadow: 0 1px 1px darken(@color--dark, 10%)
-    }
+	.style--accent & {
+		text-shadow: 0 1px 1px darken(@color--dark, 10%)
+	}
 
-    .style--dark & {
-        text-shadow: 0 1px 1px darken(@color--accent, 10%);
-    }
+	.style--dark & {
+		text-shadow: 0 1px 1px darken(@color--accent, 10%);
+	}
 
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
@@ -877,16 +879,16 @@ hr.line {
 	border: none;
 
 	.style--light & {
-        background-color: darken(@color--light, 12%);
-    }
+		background-color: darken(@color--light, 12%);
+	}
 
-    .style--accent & {
-        background-color: darken(@color--accent, 12%);
-    }
+	.style--accent & {
+		background-color: darken(@color--accent, 12%);
+	}
 
-    .style--dark & {
-        background-color: lighten(@color--dark, 15%);
-    }
+	.style--dark & {
+		background-color: lighten(@color--dark, 15%);
+	}
 
 	&.align-left {
 		margin: 20px auto 20px 0px
@@ -1136,7 +1138,7 @@ hr.line {
 .form-group {
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: space-between;
+	justify-content: space-between;
 	margin-bottom: 1em;
 
 	@media @mobile {
@@ -1219,23 +1221,23 @@ textarea {
 // Dropdowns
 
 .select-wrap {
-    max-width: 50%;
+	max-width: 50%;
 
-    @media @mobile {
-        max-width: 100%;
-    }
+	@media @mobile {
+		max-width: 100%;
+	}
 }
 
 select {
 	background-color: @color-swatch1;
 	border: 1px solid @color-swatch6;
 	padding-right: 2.2em;
-    width: 100%;
-    .appearance(none) !important;
+	width: 100%;
+	.appearance(none) !important;
 	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
-    background-repeat: no-repeat;
-    background-position: right 0.5em center;
-    background-size: 1.2em;
+	background-repeat: no-repeat;
+	background-position: right 0.5em center;
+	background-size: 1.2em;
 
 	&::-ms-expand {
 		display: none;
@@ -1254,8 +1256,8 @@ select {
 .advancedcontactform .option-item--radio,
 .advancedcontactform .option-item--checkbox {
 	list-style-type: none;
-    display: flex;
-    align-items: flex-start;
+	display: flex;
+	align-items: flex-start;
 	width: 100%;
 
 	input {
@@ -1399,7 +1401,7 @@ input:-ms-input-placeholder {
 		
 		.form__link {
 			font-family:@font-swatch5-font-family;
-            font-size: @font-swatch5-font-size;
+			font-size: @font-swatch5-font-size;
 			font-weight:@font-swatch5-font-weight;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
@@ -1789,16 +1791,16 @@ input:-ms-input-placeholder {
 			border-radius: 50%;
 
 			.style--light & {
-		        background-color: darken(@color--light, 10%);
-		    }
+				background-color: darken(@color--light, 10%);
+			}
 
-		    .style--accent & {
-		        background-color: darken(@color--accent, 10%);
-		    }
+			.style--accent & {
+				background-color: darken(@color--accent, 10%);
+			}
 
-		    .style--dark & {
-		        background-color: lighten(@color--dark, 15%);
-		    }
+			.style--dark & {
+				background-color: lighten(@color--dark, 15%);
+			}
 
 			&.selected {
 				border: 0;
@@ -1807,16 +1809,16 @@ input:-ms-input-placeholder {
 				height: 6px;
 
 				.style--light & {
-			        background-color: @color--accent;
-			    }
+					background-color: @color--accent;
+				}
 
-			    .style--accent & {
-			        background-color: @color--light;
-			    }
+				.style--accent & {
+					background-color: @color--light;
+				}
 
-			    .style--dark & {
-			        background-color: @color--accent;
-			    }
+				.style--dark & {
+					background-color: @color--accent;
+				}
 			}
 		}
 	}
@@ -1839,19 +1841,19 @@ input:-ms-input-placeholder {
 	border-radius: 3px;
 
 	.style--light & {
-        background-color: darken(@color--light, 5%);
-        border-color: darken(@color--light, 10%);
-    }
+		background-color: darken(@color--light, 5%);
+		border-color: darken(@color--light, 10%);
+	}
 
-    .style--accent & {
-        background-color: darken(@color--accent, 5%);
-        border-color: darken(@color--accent, 10%);
-    }
+	.style--accent & {
+		background-color: darken(@color--accent, 5%);
+		border-color: darken(@color--accent, 10%);
+	}
 
-    .style--dark & {
-        background-color: lighten(@color--dark, 5%);
-        border-color: darken(@color--dark, 10%);
-    }
+	.style--dark & {
+		background-color: lighten(@color--dark, 5%);
+		border-color: darken(@color--dark, 10%);
+	}
 }
 
 .blog-post-feature-image-wrap {
@@ -1882,16 +1884,16 @@ input:-ms-input-placeholder {
 			text-decoration: none;
 
 			.style--light & {
-		        color: @contrast--light;
-		    }
+				color: @contrast--light;
+			}
 
-		    .style--accent & {
-		        color: @contrast--accent;
-		    }
+			.style--accent & {
+				color: @contrast--accent;
+			}
 
-		    .style--dark & {
-		        color: @contrast--dark;
-		    }
+			.style--dark & {
+				color: @contrast--dark;
+			}
 
 			&:hover {
 				text-decoration: underline;
@@ -1932,16 +1934,16 @@ input:-ms-input-placeholder {
 		letter-spacing: @font-swatch4-letter-spacing;
 
 		.style--light & {
-	        color: @contrast--light;
-	    }
+			color: @contrast--light;
+		}
 
-	    .style--accent & {
-	        color: @contrast--accent;
-	    }
+		.style--accent & {
+			color: @contrast--accent;
+		}
 
-	    .style--dark & {
-	        color: @contrast--dark;
-	    }
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 
 	input {
