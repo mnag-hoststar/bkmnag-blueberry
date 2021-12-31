@@ -1219,6 +1219,22 @@ a.contentgroup__link {
 	height: 50px;
 }
 
+.widget button.btn span {
+	color: @font-swatch7-color;
+
+	.style--light & {
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		color: @contrast--accent;
+	} 
+}
+
 // LINE
 
 .widget.line {
@@ -1335,7 +1351,7 @@ hr.line {
 			text-align: right
 		}
 		
-		.&.justifyfull {
+		&.justifyfull {
 			text-align: justify
 		}
 		
