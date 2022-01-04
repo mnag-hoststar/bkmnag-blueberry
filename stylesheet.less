@@ -1169,69 +1169,6 @@ blockquote {
 	}
 }
 
-// BUTTON
-
-.widget.button button, 
-.widget.paypalbuynow .widget.button.paypal,
-.widget.dropbox button,
-button.btn,
-a.contentgroup__link {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	padding: 4px 0;
-	text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-	text-transform: uppercase;
-
-	.style--light & {
-		text-shadow: 0 1px 1px darken(@color--accent, 10%);
-	}
-
-	.style--accent & {
-		text-shadow: 0 1px 1px darken(@color--dark, 10%)
-	}
-
-	.style--dark & {
-		text-shadow: 0 1px 1px darken(@color--accent, 10%);
-	}
-
-	&:hover {
-		background-color: @font-swatch7-background-color-hover;
-
-		.style--light & {
-			background-color: darken(@color--accent, 5%);
-		}
-
-		.style--accent & {
-			background-color: lighten(@color--dark, 5%);
-		}
-
-		.style--dark & {
-			background-color: darken(@color--accent, 5%);
-		}
-	}
-}
-
-.widget.paypalbuynow .widget.button.paypal {
-	height: 50px;
-}
-
-.widget button.btn span {
-	color: @font-swatch7-color;
-
-	.style--light & {
-		color: @contrast--accent;
-	}
-
-	.style--accent & {
-		color: @contrast--dark;
-	}
-
-	.style--dark & {
-		color: @contrast--accent;
-	} 
-}
-
 // LINE
 
 .widget.line {
@@ -1785,7 +1722,34 @@ footer.bk-footer .widget.profile .form-group.profile__form-group.profile__form-g
 // Button
 
 button,
-button.btn {
+button.btn,
+.widget.button button,
+.contactform button,
+.contactform button.btn,
+.signupform fieldset button,
+.signupform fieldset button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button,
+.blog-search-submit-button,
+.blog-list-footer .paginate-older,
+.ecom-productslist-products .productlist-search .btn,
+.widget.ecomproduct .ecom-product .btn,
+.widget.ecomcheckout .checkout-order-button,
+.widget.ecombasket .ecombasket-pull,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecombasketsummary .basket-summary-continue-shopping,
+.widget.ecombasketsummary .basket-summary-submit,
+.widget.feature .feature-bgimg .content button,
+.widget.tweet a,
+.widget.socialicons span a,
+.widget.clicktocall a,
+.blog-post-more-link a,
+.widget.ecomcategorieslist ul li a,
+.widget.yelpreview .review-body .review-link a,
+a.contentgroup__link {
 	display: block;
 	padding: 8px 25px;
 	margin: 0;
