@@ -1843,6 +1843,26 @@ a.contentgroup__link {
 	}
 }
 
+.widget.paypalbuynow .widget.button.paypal {
+	height: 50px;
+}
+
+.widget button.btn span {
+	color: @font-swatch7-color;
+
+	.style--light & {
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		color: @contrast--accent;
+	} 
+}
+
 // Placeholders
 
 select::-webkit-input-placeholder,
