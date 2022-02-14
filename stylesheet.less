@@ -87,8 +87,6 @@ label, .label {
 p, ul, ol, li,
 dd, pre, code,
 .contentgroup__body,
-.widget.clicktocall a,
-.widget.clicktocall a:hover,
 blockquote,
 .widget.image .image-description,
 .blog-post-published-date {
@@ -1194,99 +1192,6 @@ hr.line {
 	}
 }
 
-// CLICK TO CALL
-
-.widget.clicktocall {
-	padding: 8px 0;
-
-	a {
-		background-image: image('/images/ic-call-desktop.svg');
-		background-size: 7px;
-		background-position: left center;
-		background-repeat: no-repeat;
-		padding: 4px 0 4px 18px;
-		font-family: @font-swatch5-font-family;
-		font-size: @font-swatch5-font-size;
-		font-weight: @font-swatch5-font-weight;
-		line-height: @font-swatch5-line-height;
-		color: @font-swatch4-color;
-		letter-spacing: @font-swatch5-letter-spacing;
-		text-decoration: none;
-
-		@media @mobile { 
-			background-image: image('/images/ic-call.svg');
-			background-size: 7px;
-			background-position: 14px center;
-			background-repeat: no-repeat;
-			background-color: @font-swatch7-background-color;
-			font-family: @font-swatch7-font-family;
-			font-size: .75em;
-			font-weight: @font-swatch7-font-weight;
-			line-height: @font-swatch7-line-height;
-			color: @font-swatch7-color;
-			letter-spacing: @font-swatch7-letter-spacing;
-			background-color: @font-swatch7-background-color;
-			padding: 12px 12px 12px 34px;
-			border: none;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			text-decoration: none;
-			text-transform: uppercase;
-			text-shadow: 0 1px 1px fade(@color-swatch7, 50%);
-		}
-	
-		&:hover {
-			cursor: pointer;
-
-			@media @mobile { 
-				background-color: @font-swatch7-background-color-hover;
-				cursor: pointer;
-			}
-		}
-		
-		&:active {
-			box-shadow: inset 0 2px 3px rgba(0,0,0,0.1)
-		}
-	
-		.style--light & {
-			color: @contrast--light;
-		}
-	
-		.style--accent & {
-			color: @contrast--accent;
-		}
-	
-		.style--dark & {
-			color: @contrast--dark;
-		}
-		
-		&.justifyleft {
-			text-align: left
-		}
-		
-		&.justifycenter {
-			text-align: center
-		}
-		
-		&.justifyright {
-			text-align: right
-		}
-		
-		&.justifyfull {
-			text-align: justify
-		}
-		
-		&.italic {
-			font-style: italic
-		}
-		
-		&.bold {
-			font-weight: bold
-		}
-	}
-}
-
 // TWITTER FULL
 
 .widget.twitter a,
@@ -1749,18 +1654,22 @@ select {
 .btn,
 button.btn,
 button.button,
-.widget.profile form button,
+.contactform button,
+.contactform button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
 .widget.tweet a,
-.widget.dropbox button,
-.widget.paypalbuynow .widget.button.paypal,
 .widget.clicktocall a,
+.widget.dropbox button,
+.widget.filedownload button.btn,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.socialicons span a,
+footer.bk-footer .widget.profile .bk-profile-socialicons span a,
 .widget.feature .feature-bgimg .content button,
 .userregistration fieldset .userregistrationbtn,
-.widget.socialicons span a,
 .widget.yelpreview .review-body .review-link a,
-.blog-post-more-link a,
 form.blog-search-form .form-group button,
-a.contentgroup__link {
+.blog-post-more-link a {
 	display: block;
 	padding: 8px 25px;
 	margin: 0;
@@ -1833,18 +1742,14 @@ a.contentgroup__link {
 	} 
 }
 
-// DROPBOX, TWEET, CLICK TO CALL, PAYPAL BUTTON
+// Image Buttons
 
 .widget.tweet a,
+.widget.clicktocall a,
 .widget.dropbox button,
-.widget.paypalbuynow .widget.button.paypal,
-.widget.filedownload .btn,
-.widget.clicktocall a {
+.widget.filedownload button.btn {
 	&, &:hover, &:focus {
-		background-repeat: no-repeat;
-		background-position: 1em;
-		background-size: 1.5em;
-		padding-left: 3.5em;
+		background-image: none;
 	}
 }
 
