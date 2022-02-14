@@ -1,8 +1,8 @@
 {
-    "name":"Blueberry",
-    "thumbnail":"thumbnail.png",
-    "screenshot":"blueberry-screenshot.jpg",
-    "templateType":"standard",
+    "name": "Blueberry",
+    "thumbnail": "images/thumbnail.png",
+    "screenshot": "images/screenshot.jpg",
+    "templateType": "standard",
     "versionTenCompatible": 1,
     "pageTypes":["home"],
     "tags": {
@@ -10,6 +10,14 @@
         "es": ["limpio", "blog", "moderno", "colorido", "color", "abierto", "simple", "serif", "sans-serif"],
         "br": ["limpo", "blog", "moderno", "colorido", "cor", "aberto", "simples", "serif", "sans-serif"]
     },
+    "images":[
+        "images/gallery/gallery-image--1.jpg",
+        "images/gallery/gallery-image--2.jpg",
+        "images/gallery/gallery-image--3.jpg",
+        "images/gallery/gallery-image--4.jpg",
+        "images/gallery/gallery-image--5.jpg",
+        "images/gallery/gallery-image--6.jpg"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
