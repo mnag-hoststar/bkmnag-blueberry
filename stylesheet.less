@@ -1030,8 +1030,10 @@ header.bk-header {
 							display: block;
 							padding: 0;
 
-							span {
+							span.text {
 								color: @color-swatch1 !important;
+								overflow: visible;
+								word-break: break-word;
 
 								&:hover {
 									color: @color-swatch3 !important;
@@ -1838,6 +1840,7 @@ form.blog-search-form .form-group button,
 	border: none;
 	min-height: 50px;
 	min-width: 150px;
+	height: auto !important;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -2799,7 +2802,8 @@ input:-ms-input-placeholder {
 }
 
 .widget.ecomproductslist .ecom-productslist-image-wrap,
-.widget.ecomfeaturedproducts .ecom-featuredproducts-image-wrap {
+.widget.ecomfeaturedproducts .ecom-featuredproducts-image-wrap,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	background-position: center;
 	background-color: transparent;
 	margin-bottom: 0;
