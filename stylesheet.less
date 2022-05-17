@@ -997,7 +997,7 @@ header.bk-header {
 					display: none;
 					position: absolute;
 					left: auto;
-					right: 0;
+					right: 15px;
 					z-index: 500;
 					margin: 0;
 					padding: 0;
@@ -1217,6 +1217,10 @@ blockquote {
 		.style--dark & {
 			color: @color--accent;
 		}
+	}
+
+	&:after {
+		display: none;
 	}
 }
 
@@ -1562,6 +1566,7 @@ select {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	min-height: 50px;
+    height: auto !important;
 	width: 100%;
 
 	.style--light & {
@@ -1579,7 +1584,7 @@ input {
 }
 
 textarea {
-	height: 100px;
+    min-height: 100px;
 	padding-top: 14px;
 	resize: none;
 }
@@ -1822,6 +1827,7 @@ button.button,
 .advancedcontactform button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -1840,7 +1846,7 @@ form.blog-search-form .form-group button,
 	border: none;
 	min-height: 50px;
 	min-width: 150px;
-	height: auto !important;
+	height: auto;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -1969,14 +1975,15 @@ form.blog-search-form .form-group button,
 
 	span {
 		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			display: inline-block;
 			background-image: none;
 			margin: 0 5px 10px;
 			padding: 0;
-			width: 32px;
-			height: 32px;
+			width: 40px;
+			height: 40px;
+			min-width: 40px;
+			min-height: 40px;
+			line-height: 40px;
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
 			border-radius: 3px;
@@ -1985,9 +1992,13 @@ form.blog-search-form .form-group button,
 			font-size: 0;
 
 			&:before {
+				display: block;
 				font-family: 'FontAwesome';
 				text-indent: 0;
-				font-size: 24px;
+				font-size: 20px;
+				width: 40px;
+				height: 40px;
+				text-align: center;
 			}
 		}
 
@@ -2406,6 +2417,8 @@ input:-ms-input-placeholder {
 	}
 	
 	.slideshow-widget-controls {
+		margin-bottom: 20px;
+		
 		.dot {
 			width: 8px;
 			height: 8px;
