@@ -2948,6 +2948,10 @@ p.blog-post-tags-label {
 	margin: 0 auto 2em;
     padding: 10px;
 	text-align: center;
+
+	.productlist-pagination-pages .productlist-pagination-page {
+		padding: 0 0.5em;
+	}
 }
 
 //  Basket Icon 
@@ -3036,6 +3040,10 @@ p.blog-post-tags-label {
 				margin: 0 0 20px;
 				font-weight: 600;
 				word-break: break-word;
+				line-height: 2em;
+				font-family: @font-swatch4-font-family;
+				font-weight: @font-swatch4-font-weight;
+				padding-right: 0.25em;
 				
 				&:after {
 					content: ':\00a0';
@@ -3046,7 +3054,12 @@ p.blog-post-tags-label {
 	
 			.store-category-link,
 			.ecom-product-tag-link {
-				font-weight: 300;
+				display: inline-block;
+				word-break: break-word;
+				line-height: 1.4em;
+				padding: 0.3em 0;
+				font-family: @font-swatch5-font-family;
+				font-weight: @font-swatch5-font-weight;
 				order: 1;
 	
 				&:after {
